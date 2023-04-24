@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" media=""screen">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Optimo word count bookmarklet</title>
+  </head>
+  <body>
+    <div class="centerDiv">
+      <h1>Optimo word count bookmarklet</h1>
+      <p>
+        <strong>Drag</strong> the link below into your browser’s
+        <strong>bookmarks bar</strong>.
+      </p>
+      <a
+        href='javascript:(function(){const t=document.querySelectorAll("[data-slate-content]");if(location.href.includes("optimo.tools.bbc.co.uk/assets")){let e=[];t.forEach((t=>e.push(t.textContent.split(" ").length)));alert("Number of words in the article body: " + e.reduce(((t,e)=>t+e),0))}else alert("This bookmarklet works inside the Optimo editor only")})()'
+        >Optimo word count</a
+      >
+      <p>
+        When you edit an Optimo article, you can click on this bookmarklet to
+        check the <strong>word count</strong>. This tool can be used by
+        <strong>non-Latin</strong> WS language services until the word count
+        inside the Optimo editor is fixed.
+      </p>
+      <img src="screen.gif" />
+    </div>
+  </body>
+</html>
